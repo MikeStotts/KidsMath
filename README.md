@@ -5,16 +5,18 @@ This was a project in Introduction to Web Programming.
 The purpose of the project is to create a web page that will present
 practice arithmatic problems suitable for grade schoolers.
 
-Motable requirements:
-* The practice exercise was to be started on one server (admiral) but
-was then transferred to a second server (hoare).
+Notable requirements:
 
-* Provide a simple login/registeration process. Seccurity was not a
+<ol>
+<li>The practice exercise was to be started on one server (admiral) but
+was then transferred to a second server (hoare).</li>
+
+<li>Provide a simple login/registeration process. Seccurity was not a
 concern. Registered login names and passwords were to stored in a simple
-text file (no sql database).
+text file (no sql database).</li>
 
-* Multiple attempts be allowed for each problem. This is a practice
-exercise, not a test.
+<li> Multiple attempts be allowed for each problem. This is a practice
+exercise, not a test.</li>
 
 * A amswer would be counted as wrong only if the student gives up on the question.
 
