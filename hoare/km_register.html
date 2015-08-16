@@ -1,0 +1,50 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- km_register.html
+     Register a new name for kidsmath
+     -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+  <head> <title> Kids Math </title>
+  </head>
+  <body>
+	<h1> Kids Math Registration </h1>
+	<form action = "km_register.php" method = "post" onSubmit = "return verifyInput()" >
+		 <h2> Name </h2>
+		 <input type = "text" id = "name" name = "name" length = "20" / >
+		 <h2> Password </h2>
+		 <input type = "password" id = "pass" name = "pass" length = "20" />
+	         <h2> Confirm Password </h2>
+		 <input type = "password" id = "confirm" name = "confirm" length = "20" />
+		 <br />
+		 <input type = "submit" value = "Register" />
+	</form>	 
+</body>
+<script type = "text/javascript">
+	function verifyInput() {
+		var name = document.getElementById("name").value;
+		var pass = document.getElementById("pass");
+		var confirm = document.getElementById("confirm");
+		if (!name.match(/^[a-zA-Z][a-zA-Z0-9]{5,}$/)) {
+			alert("Name error. Name must be at least 6 characters " +
+			      "(letters or numer digits), with the first character a letter.");
+			return false;
+		}
+		if (!pass.value.match(/^.{6,}/) ||
+		    !pass.value.match(/^.*[a-zA-Z].*$/) ||
+		    !pass.value.match(/^.*[0-9].*$/) )	{
+			alert("Password error!! Password must be at least 6 character " +
+			      "long, with at least 1 letter and 1 numeric digit");
+			pass.value = "";
+			confirm.value = "";
+			return false;
+		}
+		if (pass.value != confirm.value) {
+		   alert ("Password does not confirm");
+		   return false;
+		}
+		return true;
+	}
+</script>
+</html>

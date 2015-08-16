@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- km_question.php
+    Ask a math question
+     -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+  <head> <title> Kids Math</title>
+    <script type = "text/javascript" src = "km_question2.js">
+    </script>
+    <style type="text/css">
+       * {font-size:24pt}
+    </style>
+    </head>
+
+  <body onLoad = "play()">
+    <h1>Kids Math</h1>
+  
+    <form action = "km_results.php" method = "POST" id = "form" onSubmit = "return quit()" >
+
+	<input type = "text"
+		id = "name" name = "name" value = "name"   
+	       onFocus = "this.blur()" style = "border: none" />
+	<br />This is question
+	<input type = "text"
+               id = "ques" name = "ques" value = "0" size = "1" 
+	       onFocus = "this.blur()" style = "border: none" />
+	You have  
+    	<input type = "text" id = "right" name = "right" value = "0" size = "1"
+	       onFocus = "this.blur()" style = "border: none" /> right, and
+    	<input type = "text" id = "wrong" name = "wrong" value = "0" size = "1"
+	       onFocus = "this.blur()" style = "border: none" /> wrong.
+	<br />
+
+      Question: <br />
+      <table>
+          <tr>
+              <td />
+              <td><input type = "text" id = "q1n" name = "q1n" size = "1"
+	                 onFocus = "this.blur()" style = "border: none" /></td>
+	      <td />
+	      <td />
+              <td><input type = "text" id = "q2n" name = "q2n" size = "1"
+	                 onFocus = "this.blur()" style = "border: none" /></td>
+          </tr>
+          <tr>
+              <td> <input type = "text" id = "q1w" name = "q1w" size = "1"
+                          onFocus = "this.blur()" style = "border: none" /></td>
+	      <td><label id = "q1div" name = "q1div"> &#x2015; </label></td>
+              <td><input type = "text" id = "qop" name = "qop" size = "1"
+	                 onFocus = "this.blur()" style = "border: none" /></td>
+              <td><input type = "text" id = "q2w" name = "q2w" size = "1"
+	                 onFocus = "this.blur()" style = "border: none" /></td>
+	      <td><label id = "q2div" name = "q2div"> &#x2015; </label></td>
+	  </tr>
+	  <tr>
+	      <td />
+              <td><input type = "text" id = "q1d" name = "q1d"  size = "1"
+	                 onFocus = "this.blur()" style = "border: none" /></td>
+	      <td />
+	      <td />
+              <td><input type = "text" id = "q2d" name = "q2d" size = "1"
+	                 onFocus = "this.blur()" style = "border: none" /></td>
+          </tr>
+      </table>
+      Answer:<br />
+      <table>
+          <tr>
+              <td />
+	      <td> <input type = "text" id = "a1n" name = "a1n" 
+			size = "1" tabindex = "20" /></td>
+          </tr>
+          <tr>
+	      <td><input type = "text" id = "a1w" name = "a1w" 
+			size = "1" tabindex = "10" /></td>
+              <td><label id = "a1div"> &#x2015; </label></td>
+          </tr>
+          <tr>
+              <td />
+	      <td><input type = "text" id = "a1d" name = "a1d"
+			size = "1" tabindex = "30" /></td>
+          </tr>
+      </table>
+      <input type = "button" id = "check" value = "Check Answer"
+             onClick = "checkAnswer()" tabindex = "40" /><br />
+      <input type = "submit" value = "Quit" tabindex = "60" />
+      <input type = "hidden" id = "base" name = "base" value = "" />
+    </form>
+  </body>
+</html>
